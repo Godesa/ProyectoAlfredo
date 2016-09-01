@@ -8,6 +8,8 @@ namespace ProyectoAlfredo.Models
 {
     public class Category
     {
+        //esto es un comen
+
 
         [Key]
         public int CategoryID { get; set; }
