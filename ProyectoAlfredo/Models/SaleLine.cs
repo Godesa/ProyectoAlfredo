@@ -20,5 +20,9 @@ namespace ProyectoAlfredo.Models
         public int IdSale { get; set; }
 
         public virtual Sale Sale { get; set; }
+
+        public int IdProduct { get; set; } //Clave Foránea Producto
+
+        public virtual Product Product { get; set; }
     }
 }

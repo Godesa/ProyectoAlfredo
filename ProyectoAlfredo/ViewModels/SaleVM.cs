@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAlfredo.ViewModels
 {
-    class SaleVM
+    public class SaleVM
     {
 
         public int IdSale { get; set; }

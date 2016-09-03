@@ -20,5 +20,9 @@ namespace ProyectoAlfredo.Models
         public int IdPurchase { get; set; } //Clave Foránea de Purchase
 
         public virtual Purchase Purchase { get; set; }
+
+        public int IdProduct { get; set; } //Clave Foránea de Producto
+
+        public virtual Product Product { get; set; }
     }
 }
