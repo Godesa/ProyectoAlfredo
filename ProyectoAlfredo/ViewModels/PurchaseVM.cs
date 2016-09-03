@@ -2,22 +2,25 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ProyectoAlfredo.ViewModels
 {
-    public class PurchaseVM
+    class PurchaseVM
     {
-       
-        public DateTime DatePurchase { get; set; }    
 
-        public virtual Provider Provider { get; set; }
+        public int IdPurchase { get; set; }
 
-        public IList<ProductDetail> ProductDetails { get; set; }
+        public Provider Provider { get; set; }
 
-        public decimal TotalPurchase { get; set; }
+        public DateTime PurchaseDate { get; set; }
 
-        
+        public List<SaleLine> PurchaseLines { get; set; }
+
+        public float PurchaseTotal { get; set; }
+
+        public string Comments { get; set; }
 
     }
 }

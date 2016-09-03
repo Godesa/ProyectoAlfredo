@@ -17,18 +17,18 @@ namespace ProyectoAlfredo.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         public DateTime SaleDate { get; set; }
 
-        [Display(Name = "Fecha de Carga")]       
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
-        public DateTime UploadDate { get; set; }
+        public int Discount { get; set; }
 
-        public int IdCustomer { get; set; } //Clave Foránea de Cliente (Customer)
-        public virtual Customer Customer { get; set; }
-
-        public virtual ICollection<ProductSale> Products { get; set; }
+        public string Comments { get; set; }
 
         [Display(Name = "Total")]
-        public float TotalSale { get; set; }
+        public float SaleTotal { get; set; }
+
+        public int IdCustomer { get; set; } //Clave Foránea de Cliente (Customer)
+
+        public virtual Customer Customer { get; set; }
+
+        public virtual ICollection<SaleLine> SaleLines { get; set; }
 
     }
 }

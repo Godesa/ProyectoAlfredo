@@ -8,15 +8,14 @@ namespace ProyectoAlfredo.Models
 {
     public class Category
     {
-        //esto es un comen
-
-
         [Key]
-        public int CategoryID { get; set; }
+        public int IdCategory { get; set; }
 
         [Display(Name = "Rubro")]
         [Required(ErrorMessage = "Campo Obligatorio")]
         public string CategoryName { get; set; }
+
+        public string CategoryDescription { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
 

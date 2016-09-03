@@ -1,21 +1,26 @@
 ﻿using ProyectoAlfredo.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ProyectoAlfredo.ViewModels
 {
-    public class SaleVM
+    class SaleVM
     {
 
-        public DateTime DateSale { get; set; }
+        public int IdSale { get; set; }
 
-        public virtual Customer Customer { get; set; }
+        public Customer Customer { get; set; }        
 
-        public IList<ProductDetail> ProductDetails { get; set; }
+        public DateTime SaleDate { get; set; }
 
-        public decimal TotalSale { get; set; }
+        public List<SaleLine> SaleLines { get; set; }
+        
+        public float SaleTotal { get; set; }
+
+        public string Comments { get; set; }
+        
     }
 }

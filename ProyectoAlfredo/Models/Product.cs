@@ -14,7 +14,7 @@ namespace ProyectoAlfredo.Models
 
         [Required(ErrorMessage = "Campo Obligatorio")]
         [Display(Name = "Descripción")]
-        public string DescriptionProduct { get; set; }
+        public string ProductDescription { get; set; }
 
         [Display(Name = "Costo")]
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
@@ -22,7 +22,7 @@ namespace ProyectoAlfredo.Models
 
         [Display(Name = "P Mayorista")]
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
-        public decimal WholesalePrice { get; set; }
+        public decimal WholeSalePrice { get; set; }
 
         [Display(Name = "P Minorista")]
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
@@ -40,11 +40,16 @@ namespace ProyectoAlfredo.Models
 
         public bool State { get; set; }
 
-        public int IdCategory { get; set; } //Clave Foránea de Rubro (Category)
+        public string Image { get; set; }
+
+        public int idCategory { get; set; } //Clave Foránea de Category
+
         public virtual Category Category { get; set; }
 
-        public virtual ICollection<ProductSale> Sales { get; set; }
-        public virtual ICollection<ProductPurchase> Purchases { get; set; }
+        public virtual ICollection<PurchaseLine> PurchaseLines { get; set; }
+
+        public virtual ICollection<SaleLine> SaleLines { get; set; }
+
         public virtual ICollection<ProductProvider> Providers { get; set; }
 
 

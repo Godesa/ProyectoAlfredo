@@ -14,7 +14,7 @@ namespace ProyectoAlfredo.Models
 
         [Display(Name = "Cliente")]
         [Required(ErrorMessage = "Campo Obligatorio")]
-        public string NameCustomer { get; set; }
+        public string CustomerName { get; set; }
 
         [Display(Name = "Dirección")]
         public string AddressCustomer { get; set; }
@@ -23,6 +23,8 @@ namespace ProyectoAlfredo.Models
         public int PhoneCustomer { get; set; }
 
         public string EmailCustomer { get; set; }
+
+        public string CuitCuil { get; set; }
 
         public virtual ICollection<Sale> Sales { get; set; }
 
